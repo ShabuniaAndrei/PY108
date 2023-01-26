@@ -6,11 +6,11 @@ class Card_Deck:
 
     def __init__(self):
         self.card = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Валет', 'Дама', 'Kороль', 'Туз']
-        self.suit = [' Пик', ' Треф', ' Бубен', ' Червей']
+        self.suit = ['Пик', 'Треф', 'Бубен', 'Червей']
 
     def __next__(self):
         if self.count < 52:
-            self.name = self.card[self.count % 13]+self.suit[self.count//13]
+            self.name = self.card[self.count % 13]+' '+self.suit[self.count // 13]
             self.count += 1
             return self.name
         else:
@@ -25,3 +25,4 @@ try:
         print(next(element))
 except StopIteration:
     print('StopIteration')
+    
