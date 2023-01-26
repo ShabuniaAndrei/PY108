@@ -56,7 +56,6 @@
 #
 # result = reduce(custom_sum, items, 10)
 # print(result)
-#
 # items_max = reduce(lambda a, b: a if (a > b) else b, items)
 # print(items_max)
 #

@@ -39,3 +39,7 @@
 # words = sentence.lower().replace('.', '').replace(',', '').split()
 # vowels = ['a', 'e', 'i', 'o', 'u']
 # consonants = {frozenset({letter for letter in word if letter not in vowels}) for word in words}
+
+# result = [user['name'] for user in users if user['phone'].endswith('8')]
+# print(*(sorted([user['name'] for user in users if user['email'] == ''])))
+# print(*sorted([user['name'] for user in users if 'email' not in user or user['email'] == '']))
