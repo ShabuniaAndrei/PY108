@@ -19,7 +19,7 @@ logging.basicConfig(format=u'#levelname-8s [%(asctime)s]%(message)s',
                     filename='log.txt', level=logging.INFO)
 
 
-class Meinfo(StatesGroup):
+class Me_info(StatesGroup):
     Q1 = State()
     Q2 = State()
 
@@ -30,19 +30,19 @@ async def enter_me_info(message: types.Message):
         await message.answer('Ведется запись...\n'
                              '1) Введите ссылку:',
                              parse_mode='Markdown')
-        await Meinfo.Q1.set()  # Начинаем ждать ответ от пользователя/админа
+        await Me_info.Q1.set()  # Начинаем ждать ответ от пользователя/админа
 
 
-@dp.message_handler(state=Meinfo.Q1)  # выполнитсчя только тогда, когда будет получем ответ от пользователя
+@dp.message_handler(state=Me_info.Q1)  # выполнитсчя только тогда, когда будет получем ответ от пользователя
 async def answer_for_q1(message, state: FSMContext):
     answer = message.text
     await state.update_data(answer1=answer)
     await message.answer('Ссылка сохранена\n'
                          '2) Введите описание:')
-    await Meinfo.Q2.set()
+    await Me_info.Q2.set()
 
 
-@dp.message_handler(state=Meinfo.Q2)  # выполнитсчя только тогда, когда будет получем ответ от пользователя
+@dp.message_handler(state=Me_info.Q2)  # выполнитсчя только тогда, когда будет получем ответ от пользователя
 async def answer_for_q2(message, state: FSMContext):
     answer = message.text
     await state.update_data(answer2=answer)
