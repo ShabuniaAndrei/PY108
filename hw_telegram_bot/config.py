@@ -1,1 +1,2 @@
 token_bot = '5845607504:AAHuaHL06xrTHyjnpL0_MeMRLyrNdTWlE5A'
+admin = 466288348
