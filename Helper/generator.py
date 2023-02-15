@@ -43,3 +43,6 @@
 # result = [user['name'] for user in users if user['phone'].endswith('8')]
 # print(*(sorted([user['name'] for user in users if user['email'] == ''])))
 # print(*sorted([user['name'] for user in users if 'email' not in user or user['email'] == '']))
+
+list1 = list(map(len, ['this', 'is', 'a', 'test']))
+list2 = [len(word) for word in ['this', 'is', 'a', 'test']]
