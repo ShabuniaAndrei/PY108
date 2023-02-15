@@ -40,9 +40,13 @@
 #             cursor.execute('''INSERT INTO tab_1(col_1) VALUES (3)''')
 #             connect.commit()
 #         elif a is not None and b is not None and c is None:
+#             cursor.execute('''INSERT INTO tab_1(col_1) VALUES (3)''')
+#             connect.commit()
 #             cursor.execute('''DELETE FROM tab_1 WHERE id=(1)''')
 #             connect.commit()
 #         elif a is not None and b is not None and type(c) is int:
+#             cursor.execute('''INSERT INTO tab_1(col_1) VALUES (3)''')
+#             connect.commit()
 #             cursor.execute('''UPDATE tab_1 SET col_1=(77) WHERE id=(3)''')
 #             connect.commit()
 #
@@ -51,11 +55,13 @@
 #     bd = BD()
 #     bd.count_arg('1')
 #     cursor.execute('''SELECT * FROM tab_1''')
+#     print(f'Передан один аргумент: {cursor.fetchall()}')
 #     bd.count_arg('1', 2)
 #     cursor.execute('''SELECT * FROM tab_1''')
+#     print(f'Передано два аргумента: {cursor.fetchall()}')
 #     bd.count_arg('1', 2, 4)
 #     cursor.execute('''SELECT * FROM tab_1''')
-#     print(cursor.fetchall())
+#     print(f'Передано три аргумента: {cursor.fetchall()}')
 
 #
 # # З а д а н и е  № 5
